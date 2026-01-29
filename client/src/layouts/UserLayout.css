@@ -1,0 +1,108 @@
+/* src/layouts/UserLayout.css */
+
+:root {
+  --navbar-bg: linear-gradient(90deg, #2d2f7f, #1c1e5f);
+  --content-max-width: 100%;
+  --content-padding: 0;
+  --section-gap: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Reset all margins and paddings */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Full viewport height layout */
+.user-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  position: relative;
+  height: auto !important;
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+}
+
+/* Main content area */
+.user-content {
+  flex: 1;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* Fix for Firefox */
+  box-sizing: border-box;
+  height: auto !important;
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+}
+
+/* Page container */
+.page-container {
+  flex: 1 0 auto;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* Page content area */
+.page-content {
+  flex: 1;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Stats section - matches navbar color */
+.stats-section {
+  background: var(--navbar-bg);
+  color: white;
+  padding: 40px 0;
+  margin: 0;
+  width: 100%;
+}
+
+.stats-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Section spacing */
+.section {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .user-content {
+    min-height: calc(100vh - 70px);
+  }
+  
+  .stats-section {
+    padding: 30px 0;
+  }
+}

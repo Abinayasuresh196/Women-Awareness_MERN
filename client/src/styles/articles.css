@@ -1,0 +1,42 @@
+.article-controls {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* Centered Loader */
+.articles-page .loader-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  width: 100%;
+}
+
+.article-controls input,
+.article-controls select {
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+.pagination {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.pagination button {
+  margin: 0 6px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #e0e0ff;
+}
+
+.pagination button.active {
+  background: #4a148c;
+  color: #fff;
+}

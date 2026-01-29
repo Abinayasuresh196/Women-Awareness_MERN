@@ -1,0 +1,206 @@
+/* =========================================
+   GENERAL NEWS PAGE STYLES - Premium Navy & White
+   ========================================= */
+
+:root {
+  --navy-primary: #1c1e5f;
+  --navy-light: #2d2f7f;
+  --pure-white: #ffffff;
+  --soft-white: #f8f9ff;
+  --accent-gold: #c5a059;
+  --text-muted: #555555;
+  --shadow-sm: 0 4px 12px rgba(28, 30, 95, 0.08);
+  --shadow-lg: 0 15px 35px rgba(28, 30, 95, 0.15);
+  --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.general-news-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--pure-white); /* Pure White Background */
+}
+
+.news-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 100px 24px 80px; /* Adjusted top padding */
+}
+
+/* =========================================
+   HEADER SECTION - Clean Typography (No Box)
+   ========================================= */
+.news-header {
+  text-align: center;
+  margin-bottom: 60px;
+  background: transparent;
+}
+
+.news-header h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  color: var(--navy-primary);
+  margin-bottom: 15px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.news-header p {
+  font-size: 1.2rem;
+  color: var(--navy-light);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+.news-header::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--navy-primary);
+  margin: 20px auto 0;
+  border-radius: 2px;
+}
+
+/* =========================================
+   NEWS GRID & CARDS
+   ========================================= */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+.news-card {
+  background: var(--pure-white);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(28, 30, 95, 0.05);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  height: 100%;
+  animation: fadeIn 0.8s ease-in-out; /* Smooth entrance for cards */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.news-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--navy-light);
+}
+
+/* Image Styling */
+.news-image-container {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background-color: #f0f0f0; /* Placeholder color while image loads */
+}
+
+.news-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.news-card:hover .news-image {
+  transform: scale(1.08);
+}
+
+.news-source-tag {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: var(--navy-primary);
+  color: white;
+  padding: 5px 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 30px;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+/* Content Section */
+.news-content {
+  padding: 24px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-title {
+  font-size: 1.25rem;
+  color: var(--navy-primary);
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.news-description {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.news-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px dashed rgba(28, 30, 95, 0.1);
+  margin-top: auto;
+}
+
+.news-date {
+  color: var(--navy-light);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.news-link {
+  background: var(--navy-primary);
+  color: white !important;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 10px 18px;
+  border-radius: 10px;
+  transition: var(--transition);
+}
+
+.news-link:hover {
+  background: var(--accent-gold);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .news-grid { grid-template-columns: 1fr; }
+  .news-header h1 { font-size: 2rem; }
+}
+/* Main Page Header Title */
+.laws-title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem) !important; /* 3.5rem-la irunthu kuraikkappattathu */
+  color: var(--navy-primary);
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}

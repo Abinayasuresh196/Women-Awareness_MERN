@@ -1,0 +1,129 @@
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+/* ===== PAGE ===== */
+.register-page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  overflow: hidden;
+}
+
+/* LEFT IMAGE */
+.register-left {
+  flex: 1;
+  background: url("/assets/images/register.jpg") center/cover no-repeat;
+}
+
+/* RIGHT */
+.register-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CARD */
+.register-card {
+  background: white;
+  width: 100%;
+  max-width: 440px;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
+
+/* TEXT */
+.register-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.register-card p {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* INPUT */
+.register-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+}
+
+/* BUTTON */
+.register-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(102,126,234,0.4);
+}
+
+/* BOTTOM */
+.register-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.85rem;
+}
+
+.register-bottom a {
+  color: #667eea;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* ===== ANIMATIONS ===== */
+.animate-card {
+  animation: slideFadeUp 0.9s ease forwards;
+}
+
+.animate-image {
+  animation: imageFade 1.2s ease forwards;
+}
+
+@keyframes slideFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes imageFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .register-page {
+    flex-direction: column;
+  }
+
+  .register-left {
+    height: 40vh;
+  }
+}

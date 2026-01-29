@@ -1,0 +1,114 @@
+/* ULTRA-AGGRESSIVE SCROLL CONTROL - NUCLEAR OPTION */
+/* Force ALL scroll behavior to be auto and prevent ANY scroll restoration */
+
+/* HTML level - Nuclear scroll control */
+html {
+  scroll-behavior: auto !important;
+  scroll-restoration: manual !important;
+  position: relative !important;
+  overflow: visible !important;
+  height: 100% !important;
+}
+
+/* Body level - Nuclear scroll control */
+body {
+  scroll-behavior: auto !important;
+  scroll-restoration: manual !important;
+  position: relative !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Force scroll position to 0 on ALL elements */
+* {
+  scroll-behavior: auto !important;
+}
+
+/* App container - Force scroll reset */
+.app-wrapper, .app-container {
+  scroll-behavior: auto !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* Layout containers - Force scroll reset */
+.user-layout, .admin-layout {
+  scroll-behavior: auto !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* Main content areas - Force scroll reset */
+.user-content, .admin-main {
+  scroll-behavior: auto !important;
+  position: relative !important;
+  overflow: auto !important;
+}
+
+/* Prevent any smooth scrolling */
+*:not(input):not(textarea) {
+  scroll-behavior: auto !important;
+}
+
+/* Force immediate scroll position reset */
+@keyframes forceScrollReset {
+  from { scroll-top: 1000px; }
+  to { scroll-top: 0; }
+}
+
+/* Apply force reset animation to body */
+body.force-scroll-reset {
+  animation: forceScrollReset 0s;
+}
+
+/* Additional CSS to prevent scroll restoration */
+html, body {
+  -webkit-overflow-scrolling: touch !important;
+  overscroll-behavior: none !important;
+  touch-action: manipulation !important;
+}
+
+/* Nuclear option: Force scroll position via CSS custom properties */
+:root {
+  --scroll-top: 0;
+}
+
+html {
+  scroll-top: var(--scroll-top) !important;
+}
+
+body {
+  scroll-top: var(--scroll-top) !important;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+/* Hover scale effect */
+.card-hover:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Custom scrollbar */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: #7e22ce #f3f3f3;
+}
+.scrollbar-thumb-purple-700::-webkit-scrollbar-thumb {
+  background-color: #7e22ce;
+  border-radius: 9999px;
+}
+.scrollbar-track-gray-200::-webkit-scrollbar-track {
+  background-color: #f3f3f3;
+  border-radius: 9999px;
+}

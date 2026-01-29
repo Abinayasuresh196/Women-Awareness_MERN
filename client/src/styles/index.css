@@ -1,0 +1,223 @@
+/* ===== GLOBAL RESET ===== */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  height: auto !important;
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+}
+
+/* Remove all transitions to prevent glitch */
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  height: auto !important;
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+}
+
+.user-layout,
+.user-content,
+.admin-layout,
+.admin-content {
+  /* Removed transitions to prevent glitch */
+}
+
+/* Remove blur effects globally */
+* {
+  backdrop-filter: none !important;
+  filter: none !important;
+  animation: none !important;
+  transition: none !important;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  height: auto !important;
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* App Wrapper */
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: auto !important;
+  overflow: hidden;
+}
+
+/* App Container */
+.app-container {
+  flex: 1 0 auto;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: auto !important;
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+}
+
+/* ===== LINKS ===== */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== BUTTONS ===== */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  /* Removed transition to eliminate blur effect */
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ===== CONTAINERS ===== */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* ===== HEADINGS ===== */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: #4a148c;
+}
+
+p {
+  color: #555;
+}
+
+/* ===== CARDS ===== */
+.card-hover {
+  /* Removed transition to eliminate blur effect */
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+/* ===== SCROLLBAR STYLING ===== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a148c;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6a23c1;
+}
+
+/* ===== RESPONSIVE IMAGE ===== */
+img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* ===== LINKS & BUTTONS ===== */
+a, button {
+  /* Removed transition to eliminate blur effect */
+}
+
+a:hover, button:hover {
+  opacity: 0.85;
+}
+
+/* ===== UTILITIES ===== */
+.text-center { text-align: center; }
+.flex { display: flex; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.mt-4 { margin-top: 1rem; }
+.mb-4 { margin-bottom: 1rem; }
+.p-4 { padding: 1rem; }
+.rounded { border-radius: 0.5rem; }
+
+/* ===== ENSURE CONTENT VISIBILITY ===== */
+main {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure all content is visible */
+* {
+  visibility: inherit;
+}
+
+.app-container {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+}

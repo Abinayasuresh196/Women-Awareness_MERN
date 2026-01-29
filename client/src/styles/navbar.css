@@ -1,0 +1,121 @@
+/* =========================================
+   NAVBAR CORE (Always Toggle Mode)
+   ========================================= */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: linear-gradient(90deg, #2d2f7f, #1c1e5f);
+  height: 75px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Section */
+.navbar-logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-logo-img { width: 45px; height: 45px; }
+.navbar-logo-text { font-weight: 700; font-size: 20px; }
+
+/* ACTIONS: FIXED (Always visible on top right) */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.auth-status-fixed {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-avatar-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background:  rgba(255, 255, 255, 0.99);
+  padding: 6px 14px;
+  border-radius: 30px;
+}
+
+.user-avatar { width: 32px; height: 32px; border-radius: 50%; border: 2px solid #fff; }
+.user-name-label { color: white; font-size: 14px; font-weight: 500; }
+
+.logout-btn-fixed, .login-btn-fixed {
+  background: white;
+  color: #1c1e5f !important;
+  padding: 8px 18px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* SIDE MENU (The Drawer) */
+.nav-menu {
+  position: fixed;
+  top: 75px;
+  right: -300px; /* Initially hidden */
+  width: 280px;
+  height: 100vh;
+  background: #1c1e5f;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+  gap: 25px;
+  list-style: none;
+  transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+}
+
+.nav-menu.active {
+  right: 0; /* Shows when active */
+}
+
+.nav-link {
+  color: #e0e3ff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* HAMBURGER ICON */
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  width: 28px;
+  height: 3px;
+  background: white;
+  border-radius: 5px;
+}
+
+/* Hide name on small screens but keep avatar */
+@media (max-width: 600px) {
+  .user-name-label, .navbar-logo-text { display: none; }
+  .navbar-actions { gap: 10px; }
+}

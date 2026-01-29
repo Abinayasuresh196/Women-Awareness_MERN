@@ -1,0 +1,319 @@
+/* ===== ADMIN LAYOUT - PROFESSIONAL CLEAN DESIGN ===== */
+
+/* ROOT LAYOUT */
+.admin-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* NAVBAR */
+.admin-header {
+  height: 70px;
+  background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  color: white;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  margin: 0;
+}
+
+/* NAVBAR CONTAINER */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
+/* LOGO SECTION */
+.admin-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: white;
+  transition: opacity 0.3s ease;
+}
+
+.admin-logo:hover {
+  opacity: 0.8;
+}
+
+.admin-logo-img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(1);
+}
+
+.admin-logo-text {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* USER PROFILE SECTION */
+.admin-header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.admin-user-profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.admin-user-name {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.admin-user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  object-fit: cover;
+}
+
+.admin-logout-button {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 8px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.admin-logout-button:hover {
+  background: #ff5252;
+  border-color: #ff5252;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 82, 82, 0.3);
+}
+
+/* BODY WRAPPER */
+.admin-body {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  max-width: none; /* Remove any max-width constraints */
+}
+
+/* SIDEBAR - LEFT SIDE */
+.admin-sidebar {
+  width: 270px;
+  background: #1a237e;
+  height: 100%;
+  overflow-y: auto;
+  flex-shrink: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  margin-right: auto;
+  max-width: none; /* Remove any max-width constraints */
+  position: relative;
+  z-index: 1001;
+}
+
+/* SIDEBAR NAVIGATION */
+.admin-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px;
+  gap: 5px;
+}
+
+.admin-sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 14px 18px;
+  color: #c5cae9;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-sidebar-item .icon {
+  margin-right: 12px;
+  font-size: 1.1rem;
+  width: 20px;
+  text-align: center;
+}
+
+.admin-sidebar-item:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+}
+
+.admin-sidebar-item.active {
+  background: rgba(255, 255, 255, 0.18);
+  color: white;
+  box-shadow: none;
+}
+
+/* MAIN CONTENT AREA - LEFT SIDE */
+.admin-main {
+  flex: 1;
+  background: #f4f6f9;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 35px 30px 25px 30px; /* Reduced top padding from 50px to 35px */
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0;
+  /* Remove explicit width to let flex: 1 handle it naturally */
+}
+
+/* Remove default margins from all child elements */
+.admin-main > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.admin-main > * + * {
+  margin-top: 20px;
+}
+
+/* SCROLLBAR STYLING */
+.admin-main::-webkit-scrollbar,
+.admin-sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.admin-main::-webkit-scrollbar-track,
+.admin-sidebar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.admin-main::-webkit-scrollbar-thumb,
+.admin-sidebar::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+}
+
+.admin-main::-webkit-scrollbar-thumb:hover,
+.admin-sidebar::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .admin-sidebar {
+    width: 240px;
+  }
+  
+  .admin-main {
+    padding: 30px 25px 20px 25px; /* Reduced top padding from 40px to 30px */
+    /* Remove explicit width to let flex: 1 handle it naturally */
+  }
+  
+  .admin-header {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-body {
+    flex-direction: column;
+  }
+  
+  .admin-sidebar {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-right: 0;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    bottom: 0;
+    transform: translateX(-100%);
+  }
+  
+  .admin-sidebar.sidebar-open {
+    transform: translateX(0);
+  }
+  
+  .admin-sidebar.sidebar-closed {
+    transform: translateX(-100%);
+  }
+  
+  .admin-sidebar-nav {
+    flex-direction: row;
+    padding: 15px;
+    gap: 10px;
+    overflow-x: auto;
+  }
+  
+  .admin-sidebar-item {
+    min-width: 120px;
+    padding: 10px 15px;
+    font-size: 0.85rem;
+  }
+  
+  .admin-main {
+    padding: 25px 20px 15px 20px; /* Reduced top padding from 30px to 25px */
+    /* Remove explicit width to let flex: 1 handle it naturally */
+  }
+  
+  .navbar-container {
+    gap: 10px;
+  }
+  
+  .admin-user-name {
+    display: none;
+  }
+  
+  .admin-logo-text {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-header {
+    padding: 0 15px;
+  }
+  
+  .admin-main {
+    padding: 20px 15px 15px 15px; /* Reduced top padding from 25px to 20px */
+  }
+  
+  .admin-logo-img {
+    height: 35px;
+  }
+  
+  .admin-logout-button {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}
