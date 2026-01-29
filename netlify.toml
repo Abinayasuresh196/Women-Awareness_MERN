@@ -12,7 +12,7 @@
 # API proxy to backend
 [[redirects]]
   from = "/api/*"
-  to = "https://women-awareness-mern.onrender.com/api/:splat"
+  to = "https://women-awareness-mern-1.onrender.com/api/:splat"
   status = 200
   force = true
 

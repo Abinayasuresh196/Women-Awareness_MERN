@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Create axios instance
 const api = axios.create({
-  baseURL: import.meta.env.PROD ? 'https://women-awareness-mern.onrender.com/api' : 'http://localhost:5000/api', // 🔗 Backend base URL
+  baseURL: import.meta.env.PROD ? 'https://women-awareness-mern-1.onrender.com/api' : 'http://localhost:5000/api', // 🔗 Backend base URL
   headers: {
     'Content-Type': 'application/json',
   },
@@ -11,7 +11,7 @@ const api = axios.create({
 
 // Create separate axios instance for AI operations with longer timeout
 const aiApiInstance = axios.create({
-  baseURL: import.meta.env.PROD ? 'https://women-awareness-mern.onrender.com/api' : 'http://localhost:5000/api', // 🔗 Backend base URL
+  baseURL: import.meta.env.PROD ? 'https://women-awareness-mern-1.onrender.com/api' : 'http://localhost:5000/api', // 🔗 Backend base URL
   headers: {
     'Content-Type': 'application/json',
   },
