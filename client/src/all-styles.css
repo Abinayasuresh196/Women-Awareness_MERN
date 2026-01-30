@@ -1,0 +1,57 @@
+/* ===== COMPREHENSIVE STYLES - IMPORT ALL CSS FILES ===== */
+
+/* Global Styles */
+@import './styles/index.css';
+@import './styles/global.css';
+
+/* Layout Styles */
+@import './layouts/UserLayout.css';
+@import './layouts/AdminLayout.css';
+
+/* Component Styles */
+@import './components/cards/ArticleCard.css';
+@import './components/cards/LawCard.css';
+@import './components/cards/SchemeCard.css';
+@import './components/common/LanguageSwitch.css';
+
+/* Page Styles */
+@import './styles/home.css';
+@import './styles/about.css';
+@import './styles/login.css';
+@import './styles/register.css';
+@import './styles/dashboard.css';
+@import './styles/articles.css';
+@import './styles/laws.css';
+@import './styles/schemes.css';
+@import './styles/awareness.css';
+@import './styles/WomenResources.css';
+@import './styles/footer.css';
+@import './styles/navbar.css';
+@import './styles/generalNews.css';
+
+/* Feature Styles */
+@import './styles/firGenerator.css';
+@import './styles/FIRAssistant.css';
+@import './styles/legalAssistant.css';
+@import './styles/articleSubmission.css';
+@import './styles/articleDetails.css';
+@import './styles/articleModal.css';
+@import './styles/lawModal.css';
+@import './styles/reportModal.css';
+
+/* Admin Styles */
+@import './styles/admin-advanced.css';
+@import './styles/manageArticles.css';
+@import './styles/manageLaws.css';
+@import './styles/manageSchemes.css';
+@import './styles/manageWomenResources.css';
+@import './styles/manageFeedback.css';
+
+/* Card Styles */
+@import './styles/LawCard.css';
+@import './styles/SchemeCard.css';
+@import './styles/WomenResourceCard.css';
+
+/* Utility Styles */
+@import './styles/loader.css';
+@import './styles/toastify.css';

@@ -12,10 +12,10 @@ export default defineConfig({
         manualChunks: undefined,
       },
     },
-    assetsInlineLimit: 0,
   },
   css: {
     devSourcemap: true,
+    modules: false, // Disable CSS modules
   },
   server: {
     port: 5173,
