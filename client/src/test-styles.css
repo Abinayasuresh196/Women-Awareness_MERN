@@ -1,0 +1,9 @@
+/* Simple test CSS to verify loading */
+body {
+  background-color: red !important;
+}
+
+.test-class {
+  color: blue !important;
+  font-size: 24px !important;
+}

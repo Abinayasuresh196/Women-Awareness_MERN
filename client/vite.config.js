@@ -6,12 +6,13 @@ export default defineConfig({
   plugins: [react()],
   base: "./", // 👈 ADD THIS FOR NETLIFY
   build: {
-    cssCodeSplit: false, // Ensure CSS is not split
+    cssCodeSplit: false,
     rollupOptions: {
       output: {
-        manualChunks: undefined, // Disable code splitting for simpler build
+        manualChunks: undefined,
       },
     },
+    assetsInlineLimit: 0, // Force all assets to be external files
   },
   server: {
     port: 5173,
