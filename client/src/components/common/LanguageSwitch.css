@@ -8,6 +8,7 @@
   padding: 4px 8px;
   border: 1px solid #ccc;
   background: #fff;
+  color: black !important;
   cursor: pointer;
   border-radius: 4px;
   transition: all 0.2s ease;
