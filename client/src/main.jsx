@@ -6,8 +6,8 @@ import "./i18n";
 import { Provider } from "react-redux";
 import store from "./app/store";
 
-// Import all styles
-import "./all-styles.css"; // Comprehensive CSS import
+// Import comprehensive styles
+import "./comprehensive-styles.css"; // All major styles in one file
 import "swiper/css"; // swiper styles for carousel
 import "swiper/css/pagination";
 import "swiper/css/navigation";
