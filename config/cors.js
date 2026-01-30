@@ -24,13 +24,21 @@ const corsOptions = {
       'https://women-awareness-app.netlify.app',
       'https://stalwart-halva-2a59d8.netlify.app', // Previous Netlify domain
       'https://keen-sorbet-c9a258.netlify.app', // Another Netlify domain
-      'https://697c4ccf19eba7dde7db0799--keen-sorbet-c9a258.netlify.app', // Current Netlify domain
+      'https://697c4ccf19eba7dde7db0799--keen-sorbet-c9a258.netlify.app', // Previous deploy preview
+      'https://697c503f01a9fbe4caf986bb--keen-sorbet-c9a258.netlify.app', // Current deploy preview
       'https://women-awareness-mern-1.onrender.com'
     ];
 
-    // Check if origin is in allowed list
+    // Check if origin is in allowed list or matches allowed patterns
     if (allowedOrigins.includes(origin)) {
       console.log(`CORS allowed origin: ${origin}`);
+      callback(null, true);
+    } else if (origin && (
+      origin.includes('netlify.app') || // Allow all Netlify domains
+      origin.includes('localhost') || // Allow all localhost
+      origin.includes('127.0.0.1') // Allow all local IP
+    )) {
+      console.log(`CORS allowed origin (pattern match): ${origin}`);
       callback(null, true);
     } else {
       console.log(`CORS blocked origin: ${origin}`);
