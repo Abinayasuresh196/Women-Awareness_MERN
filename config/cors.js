@@ -19,7 +19,10 @@ const corsOptions = {
       'http://127.0.0.1:5173',
       'http://127.0.0.1:5174',
       'http://localhost:3001', // Alternative port
-      'http://127.0.0.1:3001'
+      'http://127.0.0.1:3001',
+      // Production domains
+      'https://women-awareness-app.netlify.app',
+      'https://women-awareness-mern-1.onrender.com'
     ];
 
     // Check if origin is in allowed list
