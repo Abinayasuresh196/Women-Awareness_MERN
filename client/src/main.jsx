@@ -8,7 +8,6 @@ import store from "./app/store";
 
 // Global styles
 import "./styles/index.css"; // your global CSS
-import "./test-styles.css"; // test CSS to verify loading
 import "swiper/css"; // swiper styles for carousel
 import "swiper/css/pagination";
 import "swiper/css/navigation";

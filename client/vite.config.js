@@ -12,7 +12,10 @@ export default defineConfig({
         manualChunks: undefined,
       },
     },
-    assetsInlineLimit: 0, // Force all assets to be external files
+    assetsInlineLimit: 0,
+  },
+  css: {
+    devSourcemap: true,
   },
   server: {
     port: 5173,
