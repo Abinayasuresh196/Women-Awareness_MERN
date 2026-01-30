@@ -5,6 +5,14 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: "./", // 👈 ADD THIS FOR NETLIFY
+  build: {
+    cssCodeSplit: false, // Ensure CSS is not split
+    rollupOptions: {
+      output: {
+        manualChunks: undefined, // Disable code splitting for simpler build
+      },
+    },
+  },
   server: {
     port: 5173,
     proxy: {
