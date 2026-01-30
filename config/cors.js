@@ -22,6 +22,7 @@ const corsOptions = {
       'http://127.0.0.1:3001',
       // Production domains
       'https://women-awareness-app.netlify.app',
+      'https://stalwart-halva-2a59d8.netlify.app', // Your actual Netlify domain
       'https://women-awareness-mern-1.onrender.com'
     ];
 
